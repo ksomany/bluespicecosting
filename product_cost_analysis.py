@@ -23,11 +23,11 @@ st.markdown("*Programmed with Python and Streamlit by Kevin Somany*")
 try:
     # Get database credentials
     db_params = {
-        'dbname': os.getenv('db_name'),
-        'user': os.getenv('db_username'),
-        'password': os.getenv('db_password'),
-        'host': os.getenv('db_host'),
-        'port': os.getenv('db_port'),
+        'dbname': st.secrets['db_name'],
+        'user': st.secrets['db_username'],
+        'password': st.secrets['db_password'],
+        'host': st.secrets['db_host'],
+        'port': st.secrets['db_port'],
         'options': '-c default_transaction_read_only=on'
     }
     
